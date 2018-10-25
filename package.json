@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ahkiemcm/Self-Symmetry#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "mongoose": "^5.3.6"
   }
 }
