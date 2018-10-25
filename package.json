@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ahkiemcm/Self-Symmetry/issues"
   },
-  "homepage": "https://github.com/ahkiemcm/Self-Symmetry#readme"
+  "homepage": "https://github.com/ahkiemcm/Self-Symmetry#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
