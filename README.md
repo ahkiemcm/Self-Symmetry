@@ -1,2 +1,2 @@
-# self-symmetry
+# Self Symmetry
 Fitness Logging App
