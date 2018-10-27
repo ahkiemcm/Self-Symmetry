@@ -1,35 +1,25 @@
 const fitnessController = {
-    //= =====================
-    // INDEX
-    //= =====================
-    // Create a function sends all Donuts to donuts/index.hbs view
+
     index: (req, res) => {
-        Donut.find().then((donuts) => {
-            // res.render('donuts/index', {
-            //   whateverIWantToCallItInHandlebars: allOfTheDonutsInMyDatabase
-            // })
-            res.render('donuts/index', {
-                donuts: donuts
-            })
-        })
+        res.send("Hey whats up this is user index")
+        // res.render('app/index')
     },
     //= =====================
     // NEW
     //= =====================
     // Create a function that renders the new.hbs form
     new: (req, res) => {
-        res.render('donuts/new')
+        res.send("Yooo, I'm new here")
+        // res.render('')
     },
     //= =====================
     // SHOW
     //= =====================
     // Create a function that renders a single Donut's show page
     show: (req, res) => {
-        Donut.findById(req.params.id).then((donut) => {
-            res.render('donuts/show', {
-                donut: donut
-            })
-        })
+        res.send('You got me to show on a page man!')
+
+
     },
 
     //= =====================
@@ -39,8 +29,8 @@ const fitnessController = {
     // and upon success redirects back to the index page "/"
     create: (req, res) => {
         // req.body is just a JS object with data from the form
-        Donut.create(req.body).then((newDonut) => {
-            res.redirect(`/${newDonut._id}`)
+        User.create(req.body).then((newUser) => {
+            res.redirect(`/${newUser._id}`)
         })
     },
 
@@ -50,8 +40,8 @@ const fitnessController = {
     // Create a function that renders the edit.hbs page and
     // sends that a Donut's data to it
     edit: (req, res) => {
-        Donut.findById(req.params.id).then(donut => {
-            res.render('donuts/edit', { donut: donut })
+        User.findById(req.params.id).then(user => {
+            res.render('user/edit', { user: user })
         })
     },
     //= =====================
@@ -60,8 +50,8 @@ const fitnessController = {
     // Create a function that updates the Donut and
     // redirects back to the SHOW PAGE (not index)
     update: (req, res) => {
-        Donut.findByIdAndUpdate(req.params.id, req.body).then((updatedDonut) => {
-            res.redirect(`/${updatedDonut._id}`)
+        User.findByIdAndUpdate(req.params.id, req.body).then((updatedUser) => {
+            res.redirect(`/${updatedUser._id}`)
         })
     },
     //= =====================
@@ -80,5 +70,4 @@ const fitnessController = {
 // EXPORTS
 //= =====================
 // export the controller with
-
 module.exports = userController
