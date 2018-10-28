@@ -1,9 +1,9 @@
-const mongoose = require('../db/connections')
+const mongoose = require('../DB/connection')
 const Schema = mongoose.Schema
 
 const Fitness = new Schema({
-    Date: Date,
-    Exercises: [{
+    date: Date,
+    exercises: [{
         workout: String,
         reps: Number,
         sets: Number,

@@ -1,12 +1,12 @@
-const mongoose = require('../db/connections')
+const mongoose = require('../DB/connection')
 const Schema = mongoose.Schema
 
-const Fitness = new Schema({
-    Date: date,
-    Last_meal: [],
-    Last_beverage: String,
-    Water_intake: Number,
-    How_do_you_feel?: String
+const Nutrition = new Schema({
+    date: Date,
+    last_meal: [],
+    last_beverage: String,
+    water_intake: String,
+    How_do_you_feel: String
 })
 
 

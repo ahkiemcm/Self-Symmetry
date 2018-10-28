@@ -1,13 +1,14 @@
-const mongoose = require('../db/connections')
+const mongoose = require('../DB/connection')
 const Schema = mongoose.Schema
 
 const User = new Schema({
-    Name: String,
-    Age: Number,
-    Height: Number,
-    Weight: Number,
-    Goals: String,
-    Logs: [{}]
+    first_name: String,
+    last_name: String,
+    age: Number,
+    height: String,
+    weight: String,
+    goals: String,
+    logs: []
 })
 
 
