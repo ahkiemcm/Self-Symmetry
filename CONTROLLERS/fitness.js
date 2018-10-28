@@ -70,4 +70,4 @@ const fitnessController = {
 // EXPORTS
 //= =====================
 // export the controller with
-module.exports = userController
+module.exports = fitnessController
