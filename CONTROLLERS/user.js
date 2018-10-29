@@ -1,9 +1,5 @@
 const userController = {
-    
-    index: (req, res) => {
-        res.send("Hey whats up this is user index")
-        // res.render('app/index')
-    },
+
     //= =====================
     // NEW
     //= =====================
@@ -17,8 +13,8 @@ const userController = {
     //= =====================
     // Create a function that renders a single Donut's show page
     show: (req, res) => {
-        res.send('You got me to show on a page man!')
-
+        // res.send('You got me to show on a page man!')
+        res.render('app/user')
 
     },
 

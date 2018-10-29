@@ -1,8 +1,8 @@
 const fitnessController = {
 
     index: (req, res) => {
-        res.send("Hey whats up this is fitness index")
-        // res.render('app/index')
+        // res.send("Hey whats up this is fitness index")
+        res.render('app/')
     },
     //= =====================
     // NEW
