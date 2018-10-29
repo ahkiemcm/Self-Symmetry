@@ -1,7 +1,7 @@
 const nutritionController = {
 
     index: (req, res) => {
-        res.send("Hey whats up this is user index")
+        res.send("Hey whats up this is nutrition index")
         // res.render('app/index')
     },
     //= =====================
