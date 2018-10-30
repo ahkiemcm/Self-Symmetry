@@ -8,7 +8,6 @@ const User = new Schema({
     height: String,
     weight: String,
     goals: String,
-    logs: [Schema.Types.ObjectId]
 })
 
 

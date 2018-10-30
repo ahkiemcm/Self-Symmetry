@@ -6,6 +6,7 @@
         {{user.first_name}}!
     </h2>
 
+
     <a href="/">Return to Home Page</a>
 
     <div class="user-container-show">
@@ -33,10 +34,10 @@
         <!--USER GOALS-->
         <h3>Goals: {{user.goals}} </h3>
 
-        <br>
+        {{!-- <br>
         <!--USER LOGS-->
         <h3>Logs: {{user.logs}} </h3>
-        <!--buttons for logs-->
+        <!--buttons for logs--> --}}
 
         <br>
         <!--USER EDIT PAGE-->
@@ -44,4 +45,8 @@
         <!--USER DELETE-->
 
     </div>
+
+
+<a href="/user/:id/fitness/index" class="waves-effect waves-light btn-large">FITNESS LOG</a>
+<a href="/user/:id/nutrition/index" class="waves-effect waves-light btn-large">NUTRITION LOG</a>
 </main>

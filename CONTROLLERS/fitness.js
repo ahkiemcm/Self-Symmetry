@@ -1,8 +1,16 @@
+const Fitness = require('../models/Fitness')
+
 const fitnessController = {
 
     index: (req, res) => {
-        // res.send("Hey whats up this is fitness index")
-        res.render('app/')
+        User.find().then((fitness_log) => {
+            // res.render('donuts/index', {
+            //   whateverIWantToCallItInHandlebars: allOfTheDonutsInMyDatabase
+            // })
+            res.render('fitness/index', {
+                fitness_log: fitness
+            })
+        })
     },
     //= =====================
     // NEW

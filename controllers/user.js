@@ -11,7 +11,7 @@ const userController = {
     //= =====================
     // Create a function that renders the new.hbs form
     new: (req, res) => {
-        // 
+        
         res.render('user/new')
     },
     //= =====================
@@ -36,7 +36,8 @@ const userController = {
     create: (req, res) => {
         // req.body is just a JS object with data from the form
         User.create(req.body).then((newUser) => {
-            res.redirect(`user/${newUser._id}`)
+            // res.redirect(`user/${newUser._id}`)
+            res.redirect('/user')
         })
     },
 
@@ -58,7 +59,7 @@ const userController = {
     // redirects back to the SHOW PAGE (not index)
     update: (req, res) => {
         User.findByIdAndUpdate(req.params.id, req.body).then((updatedUser) => {
-            res.redirect(`/${updatedUser._id}`)
+            res.redirect(`/user/${updatedUser._id}`)
         })
     },
     //= =====================

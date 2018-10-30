@@ -1,3 +1,5 @@
+const Nutrition = require('../models/Nutrition')
+
 const nutritionController = {
 
     index: (req, res) => {
@@ -29,8 +31,8 @@ const nutritionController = {
     // and upon success redirects back to the index page "/"
     create: (req, res) => {
         // req.body is just a JS object with data from the form
-        User.create(req.body).then((newUser) => {
-            res.redirect(`/${newUser._id}`)
+        Nutrition.create(req.body).then((newNutrition) => {
+            res.redirect(`/${newNutrition._id}`)
         })
     },
 
@@ -40,8 +42,8 @@ const nutritionController = {
     // Create a function that renders the edit.hbs page and
     // sends that a Donut's data to it
     edit: (req, res) => {
-        User.findById(req.params.id).then(user => {
-            res.render('user/edit', { user: user })
+        Nutrition.findById(req.params.id).then(nutrition => {
+            res.render('nutrition/edit', { nutrition: nutrition })
         })
     },
     //= =====================
@@ -50,8 +52,8 @@ const nutritionController = {
     // Create a function that updates the Donut and
     // redirects back to the SHOW PAGE (not index)
     update: (req, res) => {
-        User.findByIdAndUpdate(req.params.id, req.body).then((updatedUser) => {
-            res.redirect(`/${updatedUser._id}`)
+        Nutrition.findByIdAndUpdate(req.params.id, req.body).then((updatedNutrition) => {
+            res.redirect(`/${updatedNutrition._id}`)
         })
     },
     //= =====================
@@ -60,7 +62,7 @@ const nutritionController = {
     // Create a function that deletes the Donut and
     // redirects back to index page "/"
     delete: (req, res) => {
-        Donut.findByIdAndRemove(req.params.id).then(() => {
+        Nutrition.findByIdAndRemove(req.params.id).then(() => {
             res.redirect('/')
         })
     }

@@ -8,21 +8,24 @@ const nutritionController = require('../controllers/nutrition')
 //homepage
 router.get('/', applicationController.index)
 
-
+//User
 router.get('/user/index', userController.index)
 router.get('/user/new', userController.new)
-router.get('/user/:id', userController.show)
 router.post('/user', userController.create)
+router.get('/user/:id', userController.show)
 router.get('/:id/edit', userController.edit)
 router.put('/:id', userController.update)
 router.delete('/:id', userController.delete)
 
-router.get('/user/fitness/new', fitnessController.new)
-router.get('user/:id/fitness', fitnessController.show)
-router.post('user/fitness', fitnessController.create)
+//Fitness Log
+router.get('user/:id/fitness/index', fitnessController.index)
+router.get('/user/:id/fitness/new', fitnessController.new)
+router.post('user/:id/fitness', fitnessController.create)
 router.get('user/:id/fitness/edit', fitnessController.edit)
 router.put('user/:id', fitnessController.update)
 router.delete('/:id', fitnessController.delete)
+
+//Nutrition Log
 
 router.get('/nutrition/new', nutritionController.new)
 router.get('/nutrition/:id', nutritionController.show)
