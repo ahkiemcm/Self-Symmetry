@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Nutrition = new Schema({
     date: Date,
-    last_meal: [],
+    last_meal: [String],
     last_beverage: String,
     water_intake: String,
     How_do_you_feel: String

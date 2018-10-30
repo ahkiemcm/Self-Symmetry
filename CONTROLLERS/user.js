@@ -1,7 +1,9 @@
+const User = require('../models/User')
+
 const userController = {
     
     index: (req, res) => {
-        // res.send("Hey whats up this is user index")
+        // res.send("Hey whats up this is
         res.render('user/index')
     },
     //= =====================
@@ -9,7 +11,7 @@ const userController = {
     //= =====================
     // Create a function that renders the new.hbs form
     new: (req, res) => {
-        // res.send("Yooo, I'm new here")
+        // 
         res.render('user/new')
     },
     //= =====================
@@ -19,10 +21,10 @@ const userController = {
     show: (req, res) => {
         // res.send('You got me to show on a page man!')
         const userId = req.params.storesId
-        User.findById(userId).populate('fitness')
-            .then((store) => {
+        User.findById(userId).populate('fitness' , 'nutrition')
+            .then((user) => {
                 // res.send(store)
-                res.render('user/show', { store: store })
+                res.render('user/show', { user: user })
             })
     },
 
@@ -34,7 +36,7 @@ const userController = {
     create: (req, res) => {
         // req.body is just a JS object with data from the form
         User.create(req.body).then((newUser) => {
-            res.redirect(`/${newUser._id}`)
+            res.redirect(`user/${newUser._id}`)
         })
     },
 
