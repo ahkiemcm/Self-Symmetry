@@ -1,13 +1,15 @@
 const express = require('express')
 const router = express.Router()
-const applicationController = require('../CONTROLLERS/application')
-const userController = require('../CONTROLLERS/user')
-const fitnessController = require('../CONTROLLERS/fitness')
-const nutritionController = require('../CONTROLLERS/nutrition')
+const applicationController = require('../controllers/application')
+const userController = require('../controllers/user')
+const fitnessController = require('../controllers/fitness')
+const nutritionController = require('../controllers/nutrition')
 
 //homepage
 router.get('/', applicationController.index)
 
+
+router.get('/user/index', userController.index)
 router.get('/user/new', userController.new)
 router.get('/user/:id', userController.show)
 router.post('/user', userController.create)
