@@ -8,7 +8,7 @@ const User = new Schema({
     height: String,
     weight: String,
     goals: String,
-    logs: []
+    logs: Array
 })
 
 

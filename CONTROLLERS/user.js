@@ -1,12 +1,16 @@
 const userController = {
-
+    
+    index: (req, res) => {
+        // res.send("Hey whats up this is user index")
+        res.render('user/index')
+    },
     //= =====================
     // NEW
     //= =====================
     // Create a function that renders the new.hbs form
     new: (req, res) => {
-        res.send("Yooo, I'm new here")
-        // res.render('')
+        // res.send("Yooo, I'm new here")
+        res.render('user/new')
     },
     //= =====================
     // SHOW
@@ -14,8 +18,12 @@ const userController = {
     // Create a function that renders a single Donut's show page
     show: (req, res) => {
         // res.send('You got me to show on a page man!')
-        res.render('app/user')
-
+        const userId = req.params.storesId
+        User.findById(userId).populate('fitness')
+            .then((store) => {
+                // res.send(store)
+                res.render('user/show', { store: store })
+            })
     },
 
     //= =====================
@@ -36,7 +44,8 @@ const userController = {
     // Create a function that renders the edit.hbs page and
     // sends that a Donut's data to it
     edit: (req, res) => {
-        User.findById(req.params.id).then(user => {
+        var userEdit = req.params.id
+        User.findById(userEdit).then(user => {
             res.render('user/edit', { user: user })
         })
     },

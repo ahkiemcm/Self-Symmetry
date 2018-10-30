@@ -17,7 +17,7 @@ const fitnessController = {
     //= =====================
     // Create a function that renders a single Donut's show page
     show: (req, res) => {
-        res.send('You got me to show on a page man!')
+        res.render('app/fitness')
 
 
     },

@@ -1,0 +1,41 @@
+<main>
+
+    <h2>EDIT YOUR PROFILE</h2>
+
+    <a href="/">Return to Home Page</a>
+
+    <div id="edit-form" class="user-container-show">
+
+        <form action="/{{user._id}}?_method=PATCH" method="POST">
+
+        <form action="/" method="POST">
+            <div>
+                <label for="first-name">First Name: </label>
+                <input type="text" name="first-name" value="{{user.first_name}}">
+            </div>
+            <div>
+                <label for="last-name">Last Name: </label>
+                <input type="text" name="last-name" value="{{user.last_name}}">
+            </div>
+            <div>
+                <label for="age">Age: </label>
+                <input type="number" name='age' value="{{user.age}}">
+            </div>
+            <div>
+                <label for="height">Height: </label>
+                <input type="string" name="height" value="{{user.height}}">
+            </div>
+            <div>
+                <label for="weight">Weight:</label>: </label>
+                <input type="string" name="weight" value="{{user.weight}}">
+            </div>
+            <div>
+                <label for="goals">Goals:</label>: </label>
+                <input type="text" name="goals">
+            </div>
+        
+            <button type="submit">Create New Profile</button>
+        </form>
+
+    </div>
+</main>
