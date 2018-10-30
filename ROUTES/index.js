@@ -9,10 +9,10 @@ const nutritionController = require('../controllers/nutrition')
 router.get('/', applicationController.index)
 
 //User
-router.get('/user/index', userController.index)
+router.get('/user', userController.index)
 router.get('/user/new', userController.new)
 router.post('/user', userController.create)
-router.get('/user/:id', userController.show)
+router.get('/user/:userId', userController.show)
 router.get('/:id/edit', userController.edit)
 router.put('/:id', userController.update)
 router.delete('/:id', userController.delete)
