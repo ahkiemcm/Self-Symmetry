@@ -38,14 +38,14 @@ const userController = {
     //= =====================
     // CREATE
     //= =====================
-    // Create a function that creates a new Donut
+    // Create a function that creates a new User
     // and upon success redirects back to the index page "/"
     create: (req, res) => {
         // req.body is just a JS object with data from the form
         User.create(req.body)
             .then((newUser) => {
                 res.redirect(`user/${newUser._id}`)
-                // res.redirect('/user')
+
             })
     },
 
