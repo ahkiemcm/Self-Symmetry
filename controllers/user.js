@@ -60,7 +60,7 @@ const userController = {
     edit: (req, res) => {
         var userEdit = req.params.id
         User.findById(userEdit).then(user => {
-            res.render('user/edit', { user: user })
+            res.render('/user/:id/edit', { user: user })
         })
     },
     //= =====================

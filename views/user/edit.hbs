@@ -7,7 +7,7 @@
     <div id="edit-form" class="user-container-show">
 
 
-        <form action="/" method="PUT" method="PATCH">
+        <form action="/user/{{user._id}}/edit?_method=PUT" method="POST" >
             <div>
                 <label for="first-name">First Name: </label>
                 <input type="text" name="first-name" value="{{user.first_name}}">
