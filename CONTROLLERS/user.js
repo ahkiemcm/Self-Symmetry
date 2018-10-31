@@ -44,7 +44,7 @@ const userController = {
         // req.body is just a JS object with data from the form
         User.create(req.body)
             .then((newUser) => {
-                res.redirect(`user/${newUser._id}`)
+                res.redirect(`/user/${newUser._id}`)
 
             })
     },
@@ -77,7 +77,7 @@ const userController = {
     // redirects back to index page "/"
     delete: (req, res) => {
         User.findByIdAndRemove(req.params.userId).then(() => {
-            res.redirect('/user')
+            res.redirect('/')
         })
     }
 }
