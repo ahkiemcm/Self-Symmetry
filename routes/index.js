@@ -14,7 +14,7 @@ router.get('/user/new', userController.new)
 router.post('/user', userController.create)
 router.get('/user/:id', userController.show)
 router.delete('/user/:id', userController.delete)
-router.get('/:id/edit', userController.edit)
+router.get('/user/:id/edit', userController.edit)
 router.put('/:id', userController.update)
 router.patch('/:id', userController.update)
 

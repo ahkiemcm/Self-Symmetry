@@ -7,7 +7,7 @@
     <div id="edit-form" class="user-container-show">
 
 
-        <form action="/" method="POST">
+        <form action="/" method="PUT" method="PATCH">
             <div>
                 <label for="first-name">First Name: </label>
                 <input type="text" name="first-name" value="{{user.first_name}}">
@@ -33,7 +33,7 @@
                 <input type="text" name="goals">
             </div>
         
-            <button type="submit">Create New Profile</button>
+            <button type="submit">Save Changes To Profile</button>
         </form>
 
     </div>
