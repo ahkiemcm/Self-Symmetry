@@ -5,6 +5,7 @@ const userController = {
     index: (req, res) => {
         User.find({})
             .then((users) => {
+                console.log(users)
                 // res.render('donuts/index', {
                 //   whateverIWantToCallItInHandlebars: allOfTheDonutsInMyDatabase
                 // })
@@ -27,11 +28,13 @@ const userController = {
     // Create a function that renders a single Donut's show page
     show: (req, res) => {
         // res.send('You got me to show on a page man!')
-        const userId = req.params.userId
+        console.log(req.params)
+        const userId = req.params.id
         User.findById(userId)
-            .then((use) => {
+            .then((user) => {
                 // res.send(store)
-                res.render('user/show', { use: use })
+                console.log(user)
+                res.render('user/show', { user: user })
             })
     },
 
@@ -77,7 +80,7 @@ const userController = {
     // redirects back to index page "/"
     delete: (req, res) => {
         User.findByIdAndRemove(req.params.userId).then(() => {
-            res.redirect('/')
+            res.redirect('user/index')
         })
     }
 }
