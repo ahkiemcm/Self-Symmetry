@@ -79,8 +79,9 @@ const userController = {
     // Create a function that deletes the User and
     // redirects back to index page "/"
     delete: (req, res) => {
-        User.findByIdAndRemove(req.params.userId).then(() => {
-            res.redirect('user/index')
+        console.log("HELLO FROM DELETE!")
+        User.findByIdAndRemove(req.params.id).then(() => {
+            res.redirect('/user')
         })
     }
 }
