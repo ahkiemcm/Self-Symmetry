@@ -17,7 +17,7 @@ const nutritionController = {
     //= =====================
     // SHOW
     //= =====================
-    // Create a function that renders a single Donut's show page
+    // Create a function that renders a single user's show page
     show: (req, res) => {
         res.send('You got me to show on a page man!')
 
@@ -27,8 +27,8 @@ const nutritionController = {
     //= =====================
     // CREATE
     //= =====================
-    // Create a function that creates a new Donut
-    // and upon success redirects back to the index page "/"
+    // Create a function that creates a new user
+    // and upon success redirects back to the nutrition page
     create: (req, res) => {
         // req.body is just a JS object with data from the form
         Nutrition.create(req.body).then((newNutrition) => {
@@ -39,8 +39,7 @@ const nutritionController = {
     //= =====================
     // EDIT
     //= =====================
-    // Create a function that renders the edit.hbs page and
-    // sends that a Donut's data to it
+    // Create a function that renders the edit.hbs page
     edit: (req, res) => {
         Nutrition.findById(req.params.id).then(nutrition => {
             res.render('nutrition/edit', { nutrition: nutrition })
@@ -49,7 +48,7 @@ const nutritionController = {
     //= =====================
     // UPDATE
     //= =====================
-    // Create a function that updates the Donut and
+    // Create a function that updates the user and
     // redirects back to the SHOW PAGE (not index)
     update: (req, res) => {
         Nutrition.findByIdAndUpdate(req.params.id, req.body).then((updatedNutrition) => {
@@ -59,7 +58,7 @@ const nutritionController = {
     //= =====================
     // DELETE
     //= =====================
-    // Create a function that deletes the Donut and
+    // Create a function that deletes the user and
     // redirects back to index page "/"
     delete: (req, res) => {
         Nutrition.findByIdAndRemove(req.params.id).then(() => {

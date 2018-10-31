@@ -41,6 +41,7 @@ Self-Symmetry is a logbook application to help the user track their fitness and 
         * Water intake: Number
         * How do you feel?: String
 
-## Contributing
+## Remarks
+I did my best, and my best got me fairly close to the finish.
 
 

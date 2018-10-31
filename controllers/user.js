@@ -6,9 +6,7 @@ const userController = {
         User.find({})
             .then((users) => {
                 console.log(users)
-                // res.render('donuts/index', {
-                //   whateverIWantToCallItInHandlebars: allOfTheDonutsInMyDatabase
-                // })
+
                 res.render('user/index', {
                     users: users
                 })
@@ -25,14 +23,13 @@ const userController = {
     //= =====================
     // SHOW
     //= =====================
-    // Create a function that renders a single Donut's show page
+    // Create a function that renders a single user's show page
     show: (req, res) => {
-        // res.send('You got me to show on a page man!')
+
         console.log(req.params)
         const userId = req.params.id
         User.findById(userId)
             .then((user) => {
-                // res.send(store)
                 console.log(user)
                 res.render('user/show', { user: user })
             })
@@ -56,7 +53,7 @@ const userController = {
     // EDIT
     //= =====================
     // Create a function that renders the edit.hbs page and
-    // sends that a Donut's data to it
+    // sends that a user's data to it
     edit: (req, res) => {
         var userEdit = req.params.id
         User.findById(userEdit).then(user => {
@@ -66,7 +63,7 @@ const userController = {
     //= =====================
     // UPDATE
     //= =====================
-    // Create a function that updates the Donut and
+    // Create a function that updates the user and
     // redirects back to the SHOW PAGE (not index)
     update: (req, res) => {
         User.findByIdAndUpdate(req.params.id, req.body).then((updatedUser) => {
@@ -77,7 +74,7 @@ const userController = {
     // DELETE
     // = =====================
     // Create a function that deletes the User and
-    // redirects back to index page "/"
+    // redirects back to index page "/user"
     delete: (req, res) => {
         console.log("HELLO FROM DELETE!")
         User.findByIdAndRemove(req.params.id).then(() => {
