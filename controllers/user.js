@@ -28,10 +28,10 @@ const userController = {
     show: (req, res) => {
         // res.send('You got me to show on a page man!')
         const userId = req.params.userId
-        User.findById(userId).populate()
-            .then((user) => {
+        User.findById(userId)
+            .then((use) => {
                 // res.send(store)
-                res.render('user/show', { user: user })
+                res.render('user/show', { use: use })
             })
     },
 
@@ -70,14 +70,14 @@ const userController = {
             res.redirect(`/user/${updatedUser._id}`)
         })
     },
-    //= =====================
+    // = =====================
     // DELETE
-    //= =====================
-    // Create a function that deletes the Donut and
+    // = =====================
+    // Create a function that deletes the User and
     // redirects back to index page "/"
     delete: (req, res) => {
-        Donut.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('/')
+        User.findByIdAndRemove(req.params.userId).then(() => {
+            res.redirect('/user')
         })
     }
 }

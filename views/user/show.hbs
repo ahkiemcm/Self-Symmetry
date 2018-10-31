@@ -3,51 +3,57 @@
     <h2>Welcome back,
 
         <!--USER NAME HERE-->
-        {{user.first_name}}!
+        {{use.first_name}}!
     </h2>
 
 
     <a href="/">Return to Home Page</a>
 
-    <div class="user-container-show">
-        <h3 id="user-name">
+    <div class="use-container-show">
+        <h3 id="use-name">
 
 
             <!-- USER NAME HERE -->
-          Name:  {{user.first_name}} {{user.last_name}}
+            Name: {{use.first_name}} {{use.last_name}}
 
 
         </h3>
 
         <br>
         <!-- USER AGE HERE -->
-        <h3>Age: {{user.age}}</h3>
+        <h3>Age: {{use.age}}</h3>
         <br>
 
         <!--USER HEIGHT-->
-        <h3>Height: {{user.height}} </h3>
+        <h3>Height: {{use.height}} </h3>
 
         <br>
         <!--USER WEIGHT-->
-        <h3>Weight: {{user.weight}} </h3>
+        <h3>Weight: {{use.weight}} </h3>
 
         <br>
         <!--USER GOALS-->
-        <h3>Goals: {{user.goals}} </h3>
+        <h3>Goals: {{use.goals}} </h3>
 
         {{!-- <br>
         <!--USER LOGS-->
-        <h3>Logs: {{user.logs}} </h3>
+        <h3>Logs: {{use.logs}} </h3>
         <!--buttons for logs--> --}}
 
         <br>
-        <!--USER EDIT PAGE-->
 
         <!--USER DELETE-->
+        <form action="/user/{{use._id}}?_method=DELETE" method="POST"><button type="submit">DELETE</button></form>
+
+        <!--USER EDIT PAGE-->
+        <form>
+            <a href="" class="waves-effect waves-light btn blue"><i class="material-icons left">border_color</i>EDIT</a>
+        </form>
 
     </div>
+    <br>
+    <br>
 
-
-<a href="/user/:id/fitness/index" class="waves-effect waves-light btn-large">FITNESS LOG</a>
-<a href="/user/:id/nutrition/index" class="waves-effect waves-light btn-large">NUTRITION LOG</a>
+    <a href="/user/:id/fitness/index" class="waves-effect waves-light btn-large">FITNESS LOG</a>
+    <a href="/user/:id/nutrition/index" class="waves-effect waves-light btn-large">NUTRITION LOG</a>
 </main>
