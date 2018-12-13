@@ -3,7 +3,7 @@ const app = express()
 const overMethod = require('method-override')
 const hbs = require('handlebars')
 const logger = require('morgan')
-const routes = require('./ROUTES/index')
+const routes = require('./routes/index')
 
 
 app.use(logger('dev'))
