@@ -55,9 +55,9 @@ const userController = {
     // Create a function that renders the edit.hbs page and
     // sends that a user's data to it
     edit: (req, res) => {
-        var userEdit = req.params.id
-        User.findById(userEdit).then(user => {
-            res.render('/user/:id/edit', { user: user })
+        // var userEdit = req.params.id
+        User.findById(req.params.id).then(user => {
+            res.render('user/:id/edit', { user: user })
         })
     },
     //= =====================
