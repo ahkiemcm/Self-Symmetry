@@ -15,7 +15,7 @@ router.post('/user', userController.create)
 router.get('/user/:id', userController.show)
 router.delete('/user/:id', userController.delete)
 router.get('/user/:id/edit', userController.edit)
-router.put('/user/:id', userController.update)
+router.put('/user/:id/', userController.update)
 router.patch('/:id', userController.update)
 
 // //Fitness Log

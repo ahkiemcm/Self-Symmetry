@@ -56,8 +56,9 @@ const userController = {
     // sends that a user's data to it
     edit: (req, res) => {
         // var userEdit = req.params.id
-        User.findById(req.params.id).then(user => {
-            res.render('user/:id/edit', { user: user })
+        console.log(req.params)
+        User.findById(req.params.id).then((user) => {
+            res.render('/user/:id/edit', { user: user })
         })
     },
     //= =====================
