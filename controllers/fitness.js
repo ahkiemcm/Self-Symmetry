@@ -37,15 +37,21 @@ const fitnessController = {
     // and upon success redirects back to the new user's page
     create: (req, res) => {
         // req.body is just a JS object with data from the form
-        User.create(req.body).then((newUser) => {
-            res.redirect(`/${newUser._id}`)
-        })
+        User.findById(req.params.id).populate("Fitness_Logs")
+            .then(user => {
+                Fitness.create(req.body).then((newEntry) => {
+                    console.log(newEntry)
+                    user.Fitness_Logs.unshift(newEntry)
+                    user.save()
+                    res.redirect(`/user/${user._id}/fitness`)
+                })
+
+
+            })
     },
 
     //= =====================
-    // EDIT
-    //= =====================
-    // Create a function that renders the edit.hbs page and
+    // EDIT  it.hbs page and
     // sends that a user's data to it
     edit: (req, res) => {
         User.findById(req.params.id).then(user => {

@@ -3,7 +3,22 @@
     <h2>{{user.first_name}}'s Fitness Logs</h2>
 
 
-    {{!-- Button here for new log entry || Create --}}
+    <form action="/user/{{user._id}}/fitness" method="POST">
+        {{!-- Button here for new log entry || Create --}}
+        <input type="text" name="workout">
+        <input type="number" name="reps">
+        <input type="number" name="sets">
+        <input type="number" name="difficulty">
+
+        <button type="submit">Add Entry</button>
+    </form>
+
+    <h5>
+        Date<br />
+        Workout || Reps || Sets || Difficulty
+    </h5>
+    <br>
+    <br>
 
     {{!-- Begin each loop here || Read --}}
     {{#each user.Fitness_Logs}}
@@ -18,6 +33,7 @@
         each one being a different method and having other discriptive numbers --}}
 
         {{date}}
+        <hr>
         <div>
             {{workout}} || {{reps}} || {{sets}} || {{difficulty}}
         </div>
