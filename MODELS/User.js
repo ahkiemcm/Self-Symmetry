@@ -8,6 +8,14 @@ const User = new Schema({
     height: String,
     weight: String,
     goals: String,
+    Fitness_Logs: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Fitness'
+    }],
+    Nutrition_Logs: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Nutrition'
+    }]
 })
 
 

@@ -7,26 +7,26 @@
     <div id="edit-form" class="user-container-show">
 
 
-        <form action="/user/{{user._id}}/edit?_method=PUT" method="POST">
+        <form action="/user/{{user._id}}?_method=PUT" method="POST">
             <div>
                 <label for="first-name">First Name: </label>
-                <input type="text" name="first-name" value="{{user.first_name}}">
+                <input type="text" name="first-name">
             </div>
             <div>
                 <label for="last-name">Last Name: </label>
-                <input type="text" name="last-name" value="{{user.last_name}}">
+                <input type="text" name="last-name">
             </div>
             <div>
                 <label for="age">Age: </label>
-                <input type="number" name='age' value="{{user.age}}">
+                <input type="number" name='age'>
             </div>
             <div>
                 <label for="height">Height: </label>
-                <input type="string" name="height" value="{{user.height}}">
+                <input type="string" name="height">
             </div>
             <div>
                 <label for="weight">Weight:</label>: </label>
-                <input type="string" name="weight" value="{{user.weight}}">
+                <input type="string" name="weight">
             </div>
             <div>
                 <label for="goals">Goals:</label>: </label>

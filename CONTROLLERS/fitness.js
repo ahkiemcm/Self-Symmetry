@@ -1,14 +1,16 @@
 const Fitness = require('../models/Fitness')
+const User = require('../models/User')
 
 const fitnessController = {
 
     index: (req, res) => {
-        User.find().then((fitness_log) => {
+        User.findById(req.params.id).populate('Fitness_Logs')
+            .then((fitness_log) => {
 
-            res.render('fitness/index', {
-                fitness_log: fitness
+                res.render('fitness/index', {
+                    fitness_log: fitness_log
+                })
             })
-        })
     },
     //= =====================
     // NEW

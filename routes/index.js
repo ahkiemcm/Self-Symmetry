@@ -18,13 +18,13 @@ router.get('/user/:id/edit', userController.edit)
 router.put('/user/:id/', userController.update)
 router.patch('/:id', userController.update)
 
-// //Fitness Log
-// router.get('user/:id/fitness/index', fitnessController.index)
-// router.get('/user/:id/fitness/new', fitnessController.new)
-// router.post('user/:id/fitness', fitnessController.create)
-// router.get('user/:id/fitness/edit', fitnessController.edit)
-// router.put('user/:id', fitnessController.update)
-// router.delete('/:id', fitnessController.delete)
+//Fitness Log
+router.get('user/:id/fitness/', fitnessController.index)
+router.get('/user/:id/fitness/new', fitnessController.new)
+router.post('user/:id/fitness', fitnessController.create)
+router.get('user/:id/fitness/edit', fitnessController.edit)
+router.put('user/:id', fitnessController.update)
+router.delete('/:id', fitnessController.delete)
 
 // //Nutrition Log
 

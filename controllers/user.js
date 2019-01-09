@@ -57,8 +57,8 @@ const userController = {
     edit: (req, res) => {
         // var userEdit = req.params.id
         console.log(req.params)
-        User.findById(req.params.id).then((user) => {
-            res.render('/user/:id/edit', { user: user })
+        User.findById(req.params.id).then(user => {
+            res.render('user/edit', { user: user })
         })
     },
     //= =====================
