@@ -5,10 +5,10 @@ const fitnessController = {
 
     index: (req, res) => {
         User.findById(req.params.id).populate('Fitness_Logs')
-            .then((fitness_log) => {
+            .then((user) => {
 
                 res.render('fitness/index', {
-                    fitness_log: fitness_log
+                    user: user
                 })
             })
     },

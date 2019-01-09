@@ -1,9 +1,12 @@
 <main>
 
-    <h2>Fitness Logs</h2>
+    <h2>{{user.first_name}}'s Fitness Logs</h2>
 
-    {{!-- Begin each loop here --}}
-    {{!-- {{#each fitness_log}} --}}
+
+    {{!-- Button here for new log entry || Create --}}
+
+    {{!-- Begin each loop here || Read --}}
+    {{#each user.Fitness_Logs}}
     <div>
 
         {{!-- For the sake of planning and time management, we will pseudocode our desires --}}
@@ -14,10 +17,13 @@
         {{!-- The exercises should be a div with a list of each object,
         each one being a different method and having other discriptive numbers --}}
 
-
+        {{date}}
+        <div>
+            {{workout}} || {{reps}} || {{sets}} || {{difficulty}}
+        </div>
 
 
     </div>
     {{!-- end loop --}}
-    {{!-- /each --}}
+    {{/each}}
 </main>

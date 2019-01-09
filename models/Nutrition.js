@@ -6,7 +6,7 @@ const Nutrition = new Schema({
     last_meal: [String],
     last_beverage: String,
     water_intake: String,
-    How_do_you_feel: String
+    how_do_you_feel: String
 })
 
 

@@ -3,12 +3,11 @@ const Schema = mongoose.Schema
 
 const Fitness = new Schema({
     date: Date,
-    exercises: [{
-        workout: String,
-        reps: Number,
-        sets: Number,
-        difficulty: Number//(level 1 - 5)
-    }]
+    workout: String,
+    reps: Number,
+    sets: Number,
+    difficulty: Number//(level 1 - 5)
+
 })
 
 
