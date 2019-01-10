@@ -1,21 +1,28 @@
 <main>
 
+    <a href="/user/{{user._id}}">
+        <div>Back to your profile</div>
+    </a>
+    <br>
+    <br>
+
+
     <h2>{{user.first_name}}'s Fitness Logs</h2>
 
 
     <form action="/user/{{user._id}}/fitness" method="POST">
         {{!-- Button here for new log entry || Create --}}
         <label for="workout">What exercise did you do?</label>
-        <input type="text" name="workout">
+        <input type="text" name="workout" required>
 
         <label for="reps">How many reps?</label>
-        <input type="number" name="reps">
+        <input type="number" name="reps" required>
 
         <label for="sets">How many sets?</label>
-        <input type="number" name="sets">
+        <input type="number" name="sets" required>
 
         <label for="difficulty">How difficult was it? Rate it on a scale of 1 - 5.</label>
-        <input type="number" name="difficulty">
+        <input type="number" name="difficulty" max="5" required>
 
         <button type="submit">Add Entry</button>
     </form>
@@ -42,7 +49,7 @@
         {{date}}
         <hr>
         <div>
-            {{workout}} || {{reps}} || {{sets}} || {{difficulty}}
+            {{workout}} || {{reps}} || {{sets}} || Lv. {{difficulty}}
         </div>
 
 

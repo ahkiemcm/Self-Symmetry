@@ -1,0 +1,59 @@
+<main>
+
+    <a href="/user/{{user._id}}">
+        <div>Back to your profile</div>
+    </a>
+    <br>
+    <br>
+
+    <h2>{{user.first_name}}'s Nutrition Logs</h2>
+
+
+    <form action="/user/{{user._id}}/nutrition" method="POST">
+        {{!-- Button here for new log entry || Create --}}
+        <label for="last_meal">What was you last meal?</label>
+        <input type="text" name="last_meal" required>
+
+        <label for="last_beverage">What was your last beverage?</label>
+        <input type="text" name="last_beverage" required>
+
+        <label for="water_intake">How much water have you had? Answer with Fluid Ounces (fl oz) </label>
+        <input type="number" name="water_intake" required>
+
+        <label for="how_do_you_feel">How do you feel? </label>
+        <input type="text" name="how_do_you_feel" required>
+
+        <button type="submit">Add Entry</button>
+    </form>
+
+    <h5>
+        Date<br />
+        Last meal || Last Beverage || Water Intake || How do you feel?
+    </h5>
+    <br>
+    <br>
+
+    {{!-- Begin each loop here || Read --}}
+    {{#each user.Nutrition_Logs}}
+    <div>
+
+        {{!-- For the sake of planning and time management, we will pseudocode our desires --}}
+        {{!-- Each log will live in a div, separated from other log entries. --}}
+
+        {{!-- Show the date of the last_meal --}}
+
+        {{!-- The exercises should be a div with a list of each object,
+        each one being a different method and having other discriptive numbers --}}
+
+        {{date}}
+        <hr>
+        <div>
+            {{last_meal}} || {{last_beverage}} || {{water_intake}} fl oz. || {{how_do_you_feel}}
+        </div>
+
+
+    </div>
+    <br>
+    {{!-- end loop --}}
+    {{/each}}
+</main>

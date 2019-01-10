@@ -16,7 +16,7 @@ const Xeke_Nutrition = new Nutrition({
     date: 10 / 15 / 18,
     last_meal: ["Baked chicken", "Green beans", "Mac n cheese"],
     last_beverage: "Sweet tea",
-    water_intake: "48 ounces",
+    water_intake: 48,
     how_do_you_feel: "Feeling alright, would have liked more vegetables with dinner."
 })
 

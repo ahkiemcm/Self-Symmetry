@@ -13,24 +13,6 @@ const fitnessController = {
             })
     },
     //= =====================
-    // NEW
-    //= =====================
-    // Create a function that renders the new.hbs form
-    new: (req, res) => {
-        res.send("Yooo, I'm new here")
-
-    },
-    //= =====================
-    // SHOW
-    //= =====================
-    // Create a function that renders a single user's show page
-    show: (req, res) => {
-        res.render('app/fitness')
-
-
-    },
-
-    //= =====================
     // CREATE
     //= =====================
     // Create a function that creates a new User
@@ -48,35 +30,6 @@ const fitnessController = {
 
 
             })
-    },
-
-    //= =====================
-    // EDIT  it.hbs page and
-    // sends that a user's data to it
-    edit: (req, res) => {
-        User.findById(req.params.id).then(user => {
-            res.render('user/edit', { user: user })
-        })
-    },
-    //= =====================
-    // UPDATE
-    //= =====================
-    // Create a function that updates the user and
-    // redirects back to the SHOW PAGE (not index)
-    update: (req, res) => {
-        User.findByIdAndUpdate(req.params.id, req.body).then((updatedUser) => {
-            res.redirect(`/${updatedUser._id}`)
-        })
-    },
-    //= =====================
-    // DELETE
-    //= =====================
-    // Create a function that deletes the User and
-    // redirects back to index page "/"
-    delete: (req, res) => {
-        Donut.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('/')
-        })
     }
 }
 

@@ -2,10 +2,10 @@ const mongoose = require('../DB/connection')
 const Schema = mongoose.Schema
 
 const Nutrition = new Schema({
-    date: Date,
-    last_meal: [String],
+    date: { type: Date, default: Date.now },
+    last_meal: String,
     last_beverage: String,
-    water_intake: String,
+    water_intake: Number,
     how_do_you_feel: String
 })
 
