@@ -3,7 +3,6 @@
 Self-Symmetry is a logbook application to help the user track their fitness and nutrition.
 
 ## Links
-- https://github.com/ahkiemcm/Self-Symmetry [GitHub]
 - https://trello.com/b/aflzqn7V/x-mehn-app [Trello-Board]
 - https://guarded-beyond-96741.herokuapp.com/ [Heroku-Site]
 
