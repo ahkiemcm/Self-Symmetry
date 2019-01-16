@@ -1,4 +1,4 @@
-<main>
+<main class="user-show">
 
     <h2>Welcome back,
 
@@ -10,49 +10,49 @@
     <a href="/">Return to Home Page</a>
 
     <div class="user-container-show">
-        <h3 id="user-name">
+        <h4 id="user-name">
 
 
             <!-- USER NAME HERE -->
             Name: {{user.first_name}} {{user.last_name}}
 
 
-        </h3>
+        </h4>
 
         <br>
         <!-- USEr AGE HERE -->
-        <h3>Age: {{user.age}}</h3>
+        <h4>Age: {{user.age}}</h4>
         <br>
 
         <!--USEr HEIGHT-->
-        <h3>Height: {{user.height}} cm</h3>
+        <h4>Height: {{user.height}} cm</h4>
 
         <br>
         <!--USEr WEIGHT-->
-        <h3>Weight: {{user.weight}} lbs</h3>
+        <h4>Weight: {{user.weight}} lbs</h3>
 
-        <br>
-        <!--USEr GOALS-->
-        <h3>Goals: {{user.goals}} </h3>
+            <br>
+            <!--USEr GOALS-->
+            <h3>Goals: {{user.goals}} </h3>
 
 
-        <br>
+            <br>
 
-        <!--USER DELETE-->
-        <form action="/user/{{user._id}}?_method=DELETE" method="POST">
-            <button type="submit" class="waves-effect waves-light btn red"><i class="material-icons left">close</i>
-                DELETE
-            </button>
-        </form>
+            <!--USER DELETE-->
+            <form action="/user/{{user._id}}?_method=DELETE" method="POST">
+                <a type="submit" class="waves-effect waves-light btn red"><i class="material-icons left">close</i>
+                    DELETE
+                </a>
+            </form>
 
-        <!--USER EDIT PAGE-->
-        <form>
-            <button>
-                <a href="/user/{{user._id}}/edit" type="submit" class="waves-effect waves-light btn blue"><i class="material-icons left">border_color</i>
+            <!--USER EDIT PAGE-->
+            <form>
+
+                <a href="/user/{{user._id}}/edit" type="submit" class="btn waves-effect waves-light blue"><i class="material-icons left">border_color</i>
                     EDIT
                 </a>
-            </button>
-        </form>
+
+            </form>
 
     </div>
     <br>

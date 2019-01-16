@@ -1,12 +1,16 @@
-<h2>Select User to view balance logs</h2>
-{{#each users}}
-<div class="user-container">
+<main class="user-container">
 
-    <a href="/user/{{_id}}">
-        <div>{{first_name}} {{last_name}}</div>
-    </a>
+    <h2>Select User to view balance logs</h2>
+    {{#each users}}
+    <div>
 
-    <br>
+        <a href="/user/{{_id}}">
+            <div>{{first_name}} {{last_name}}</div>
+        </a>
 
-</div>
-{{/each}}
+        <br>
+
+    </div>
+    {{/each}}
+
+</main>

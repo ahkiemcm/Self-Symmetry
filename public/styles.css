@@ -1,8 +1,25 @@
+.body {
+    font-family: 'Poiret One', cursive;
+}
+
+a {
+    font-size: 1.5em;
+}
+
+form {
+    font-size: 1.5em;
+}
+
+nav {
+    font-family: 'Poiret One', cursive;
+}
+
 .homepage {
     background-image: url(./images/zoltan.jpg);
     background-size: 100%;
     padding: 5.5em;
     color: gold;
+    font-family: 'Poiret One', cursive;
 }
 
 .homepage-p {
@@ -14,4 +31,71 @@
     background-size: 100%;
     padding: 5.5em;
     color: coral;
+    font-family: 'Poiret One', cursive;
+}
+
+.user-label {
+    color: white;
+}
+
+.user-container {
+    background-image: url(./images/macnewton.jpg);
+    background-size: 100%;
+    padding: 15em;
+    color: coral;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+}
+
+.user-container h2 {
+    margin-top: -120px;
+}
+
+.user-container div {
+    margin-top: 20px;
+    background-color: rgb(211, 192, 177, 0.5);
+}
+
+.user-show {
+    background-image: url(./images/barnhorn.jpg);
+    background-size: 100%;
+    padding: .5em;
+    color: coral;
+    font-family: 'Poiret One', cursive;
+}
+
+.user-edit {
+    background-image: url(./images/johnson.jpg);
+    padding: .5em;
+    background-size: 100%;
+    color: coral;
+    font-family: 'Poiret One', cursive;
+}
+
+.user-edit label {
+    color: white;
+}
+
+.fitness {
+    background-image: url(./images/sculpt-fitness-background.jpg);
+    background-size: 100%;
+    padding: 15em;
+    color: coral;
+    font-family: 'Poiret One', cursive;
+}
+
+.fitness label {
+    color: white;
+}
+
+.nutrition {
+    background-image: url(./images/lark.jpg);
+    background-size: 100%;
+    padding: 15em;
+    color: coral;
+    font-family: 'Poiret One', cursive;
+}
+
+.nutrition label {
+    color: black;
 }
