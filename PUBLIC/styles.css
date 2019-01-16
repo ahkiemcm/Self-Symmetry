@@ -1,0 +1,17 @@
+.homepage {
+    background-image: url(./images/zoltan.jpg);
+    background-size: 100%;
+    padding: 5.5em;
+    color: gold;
+}
+
+.homepage-p {
+    font-size: 2em;
+}
+
+.user-new {
+    background-image: url(./images/rawpixel.jpg);
+    background-size: 100%;
+    padding: 5.5em;
+    color: coral;
+}
