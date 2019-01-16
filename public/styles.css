@@ -17,7 +17,7 @@ nav {
 .homepage {
     background-image: url(./images/zoltan.jpg);
     background-size: 100%;
-    /* padding: 5.5rem; */
+    padding: 10rem;
     color: gold;
     font-family: 'Poiret One', cursive;
 }
